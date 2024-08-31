@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// isyana
 void InputMatriks(float matriks[][10], int baris, int kolom) {
     cout << "Masukkan elemen-elemen Matriks:\n";
     int i = 0;
@@ -17,6 +18,7 @@ void InputMatriks(float matriks[][10], int baris, int kolom) {
     }
 }
 
+// isyana
 void TampilkanMatriks(float matriks[][10], int baris, int kolom) {
     int i = 0;
     while (i < baris) {
@@ -30,6 +32,7 @@ void TampilkanMatriks(float matriks[][10], int baris, int kolom) {
     }
 }
 
+// agra
 void InisiasiMatriks() {
     int baris, kolom;
     cout << "Masukkan jumlah baris untuk Matriks: ";
@@ -44,6 +47,7 @@ void InisiasiMatriks() {
     TampilkanMatriks(matriks, baris, kolom);
 }
 
+// isyana
 void PenjumlahanMatriks() {
     int baris1, kolom1, baris2, kolom2;
     cout << "Masukkan jumlah baris untuk Matriks 1: ";
@@ -81,6 +85,7 @@ void PenjumlahanMatriks() {
     TampilkanMatriks(hasil, baris1, kolom1);
 }
 
+// agra
 void PenguranganMatriks() {
     int baris1, kolom1, baris2, kolom2;
     cout << "Masukkan jumlah baris untuk Matriks 1: ";
@@ -118,6 +123,7 @@ void PenguranganMatriks() {
     TampilkanMatriks(hasil, baris1, kolom1);
 }
 
+// jihan
 void PerkalianMatriks() {
     int baris1, kolom1, baris2, kolom2;
     cout << "Masukkan jumlah baris untuk Matriks 1: ";
@@ -159,6 +165,7 @@ void PerkalianMatriks() {
     TampilkanMatriks(hasil, baris1, kolom2);
 }
 
+// jihan
 void PerkalianSkalar() {
     int baris, kolom;
     float skalar;
@@ -186,6 +193,7 @@ void PerkalianSkalar() {
     TampilkanMatriks(hasil, baris, kolom);
 }
 
+// elsa
 void KombinasiLinearMatriks() {
     int n, m;
     cout << "Masukkan jumlah baris matriks: ";
@@ -225,6 +233,7 @@ void KombinasiLinearMatriks() {
     TampilkanMatriks(hasil, n, m);
 }
 
+// elsa
 void TransposeMatriks() {
     int baris, kolom;
     cout << "Masukkan jumlah baris untuk Matriks: ";
@@ -249,6 +258,7 @@ void TransposeMatriks() {
     TampilkanMatriks(transpose, kolom, baris);
 }
 
+// agra
 void TraceMatriks() {
     int ukuran;
     float trace = 0;
@@ -267,6 +277,7 @@ void TraceMatriks() {
     cout << "Trace Matriks: " << trace << endl;
 }
 
+// isyana
 void MatriksNol() {
     int baris, kolom;
     cout << "Masukkan jumlah baris untuk Matriks Nol: ";
@@ -280,7 +291,7 @@ void MatriksNol() {
     while (i < baris) {
         int j = 0;
         while (j < kolom) {
-            cout << setw(10) << matriks[i][j] << " ";
+            cout << setw(3) << matriks[i][j] << " ";
             j++;
         }
         cout << endl;
@@ -288,6 +299,7 @@ void MatriksNol() {
     }
 }
 
+// agra
 void MatriksIdentitas() {
     int ukuran;
     cout << "Masukkan ukuran Matriks Identitas: ";
@@ -307,7 +319,7 @@ void MatriksIdentitas() {
     while (i < ukuran) {
         int j = 0;
         while (j < ukuran) {
-            cout << setw(10) << identitas[i][j] << " ";
+            cout << setw(3) << identitas[i][j] << " ";
             j++;
         }
         cout << endl;
@@ -315,6 +327,7 @@ void MatriksIdentitas() {
     }
 }
 
+// jihan
 void Invers() {
     int n;
     cout << "Masukkan ukuran matriks persegi: ";
@@ -369,6 +382,7 @@ void Invers() {
     TampilkanMatriks(invers, n, n);
 }
 
+// elsa
 void Menu() {
     int pilihan;
     do {
