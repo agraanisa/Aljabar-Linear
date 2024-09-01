@@ -1,15 +1,16 @@
 #include <iostream>
 #include <iomanip>
+#include <cstdlib>
 
 using namespace std;
 
 // isyana
 void InputMatriks(float matriks[][10], int baris, int kolom) {
     cout << "Masukkan elemen-elemen Matriks:\n";
-    int i = 0;
-    while (i < baris) {
-        int j = 0;
-        while (j < kolom) {
+    int i = 1;
+    while (i <= baris) {
+        int j = 1;
+        while (j <= kolom) {
             cout << "Matriks[" << i << "][" << j << "] = ";
             cin >> matriks[i][j];
             j++;
@@ -20,10 +21,10 @@ void InputMatriks(float matriks[][10], int baris, int kolom) {
 
 // isyana
 void TampilkanMatriks(float matriks[][10], int baris, int kolom) {
-    int i = 0;
-    while (i < baris) {
-        int j = 0;
-        while (j < kolom) {
+    int i = 1;
+    while (i <= baris) {
+        int j = 1;
+        while (j <= kolom) {
             cout << setw(3) << matriks[i][j] << " "; 
             j++;
         }
@@ -71,10 +72,10 @@ void PenjumlahanMatriks() {
     cout << "Matriks 2:\n";
     InputMatriks(matriks2, baris2, kolom2);
     
-    int i = 0;
-    while (i < baris1) {
-        int j = 0;
-        while (j < kolom1) {
+    int i = 1;
+    while (i <= baris1) {
+        int j = 1;
+        while (j <= kolom1) {
             hasil[i][j] = matriks1[i][j] + matriks2[i][j];
             j++;
         }
@@ -109,10 +110,10 @@ void PenguranganMatriks() {
     cout << "Matriks 2:\n";
     InputMatriks(matriks2, baris2, kolom2);
     
-    int i = 0;
-    while (i < baris1) {
-        int j = 0;
-        while (j < kolom1) {
+    int i = 1;
+    while (i <= baris1) {
+        int j = 1;
+        while (j <= kolom1) {
             hasil[i][j] = matriks1[i][j] - matriks2[i][j];
             j++;
         }
@@ -147,12 +148,12 @@ void PerkalianMatriks() {
     cout << "Matriks 2:\n";
     InputMatriks(matriks2, baris2, kolom2);
     
-    int i = 0;
-    while (i < baris1) {
-        int j = 0;
-        while (j < kolom2) {
-            int k = 0;
-            while (k < kolom1) {
+    int i = 1;
+    while (i <= baris1) {
+        int j = 1;
+        while (j <= kolom2) {
+            int k = 1;
+            while (k <= kolom1) {
                 hasil[i][j] += matriks1[i][k] * matriks2[k][j];
                 k++;
             }
@@ -179,10 +180,10 @@ void PerkalianSkalar() {
     float matriks[10][10], hasil[10][10];
     InputMatriks(matriks, baris, kolom);
     
-    int i = 0;
-    while (i < baris) {
-        int j = 0;
-        while (j < kolom) {
+    int i = 1;
+    while (i <= baris) {
+        int j = 1;
+        while (j <= kolom) {
             hasil[i][j] = matriks[i][j] * skalar;
             j++;
         }
@@ -207,8 +208,8 @@ void KombinasiLinearMatriks() {
 
     float hasil[10][10] = {0};
     
-    int k = 0;
-    while (k < jumlahMatriks) {
+    int k = 1;
+    while (k <= jumlahMatriks) {
         float matriks[10][10];
         cout << "Masukkan elemen-elemen Matriks " << k + 1 << ":\n";
         InputMatriks(matriks, n, m);
@@ -217,10 +218,10 @@ void KombinasiLinearMatriks() {
         cout << "Masukkan skalar untuk Matriks " << k + 1 << ": ";
         cin >> skalar;
 
-        int i = 0;
-        while (i < n) {
-            int j = 0;
-            while (j < m) {
+        int i = 1;
+        while (i <= n) {
+            int j = 1;
+            while (j <= m) {
                 hasil[i][j] += skalar * matriks[i][j];
                 j++;
             }
@@ -244,10 +245,10 @@ void TransposeMatriks() {
     float matriks[10][10], transpose[10][10];
     InputMatriks(matriks, baris, kolom);
     
-    int i = 0;
-    while (i < baris) {
-        int j = 0;
-        while (j < kolom) {
+    int i = 1;
+    while (i <= baris) {
+        int j = 1;
+        while (j <= kolom) {
             transpose[j][i] = matriks[i][j];
             j++;
         }
@@ -268,8 +269,8 @@ void TraceMatriks() {
     float matriks[10][10];
     InputMatriks(matriks, ukuran, ukuran);
     
-    int i = 0;
-    while (i < ukuran) {
+    int i = 1;
+    while (i <= ukuran) {
         trace += matriks[i][i];
         i++;
     }
@@ -287,11 +288,11 @@ void MatriksNol() {
     
     float matriks[10][10] = {0};
     
-    int i = 0;
-    while (i < baris) {
-        int j = 0;
-        while (j < kolom) {
-            cout << setw(3) << matriks[i][j] << " ";
+    int i = 1;
+    while (i <= baris) {
+        int j = 1;
+        while (j <= kolom) {
+            cout << setw(10) << matriks[i][j] << " ";
             j++;
         }
         cout << endl;
@@ -307,19 +308,19 @@ void MatriksIdentitas() {
     
     float identitas[10][10] = {0};
     
-    int i = 0;
-    while (i < ukuran) {
+    int i = 1;
+    while (i <= ukuran) {
         identitas[i][i] = 1;
         i++;
     }
     
     cout << "Matriks Identitas:\n";
     
-    i = 0;
-    while (i < ukuran) {
-        int j = 0;
-        while (j < ukuran) {
-            cout << setw(3) << identitas[i][j] << " ";
+    i = 1;
+    while (i <= ukuran) {
+        int j = 1;
+        while (j <= ukuran) {
+            cout << setw(10) << identitas[i][j] << " ";
             j++;
         }
         cout << endl;
@@ -337,37 +338,37 @@ void Invers() {
 
     InputMatriks(matriks, n, n);
 
-    int i = 0;
-    while (i < n) {
-        int j = 0;
-        while (j < n) {
+    int i = 1;
+    while (i <= n) {
+        int j = 1;
+        while (j <= n) {
             invers[i][j] = (i == j) ? 1 : 0;
             j++;
         }
         i++;
     }
 
-    i = 0;
-    while (i < n) {
+    i = 1;
+    while (i <= n) {
         if (matriks[i][i] == 0) {
             cout << "Matriks tidak memiliki invers karena terdapat elemen diagonal yang nol." << endl;
             return;
         }
 
         float diagonal = matriks[i][i];
-        int j = 0;
-        while (j < n) {
+        int j = 1;
+        while (j <= n) {
             matriks[i][j] /= diagonal;
             invers[i][j] /= diagonal;
             j++;
         }
 
-        int k = 0;
-        while (k < n) {
+        int k = 1;
+        while (k <= n) {
             if (k != i) {
                 float rasio = matriks[k][i];
-                j = 0;
-                while (j < n) {
+                j = 1;
+                while (j <= n) {
                     matriks[k][j] -= rasio * matriks[i][j];
                     invers[k][j] -= rasio * invers[i][j];
                     j++;
@@ -405,6 +406,7 @@ void Menu() {
         cout << "Pilih operasi (0-11): ";
         cin >> pilihan;
         
+        system("cls");
         switch (pilihan) {
             case 1: InisiasiMatriks(); break;
             case 2: PenjumlahanMatriks(); break;
