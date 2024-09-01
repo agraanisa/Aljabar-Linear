@@ -292,7 +292,7 @@ void MatriksNol() {
     while (i <= baris) {
         int j = 1;
         while (j <= kolom) {
-            cout << setw(10) << matriks[i][j] << " ";
+            cout << setw(3) << matriks[i][j] << " ";
             j++;
         }
         cout << endl;
@@ -320,7 +320,7 @@ void MatriksIdentitas() {
     while (i <= ukuran) {
         int j = 1;
         while (j <= ukuran) {
-            cout << setw(10) << identitas[i][j] << " ";
+            cout << setw(3) << identitas[i][j] << " ";
             j++;
         }
         cout << endl;
